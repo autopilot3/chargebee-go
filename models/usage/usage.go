@@ -1,8 +1,8 @@
 package usage
 
 import (
-	"github.com/sfroment/chargebee-go/enum"
-	"github.com/sfroment/chargebee-go/filter"
+	"github.com/autopilot3/chargebee-go/enum"
+	"github.com/autopilot3/chargebee-go/filter"
 )
 
 type Usage struct {

@@ -2,8 +2,8 @@ package attacheditem
 
 import (
 	"fmt"
-	"github.com/sfroment/chargebee-go"
-	"github.com/sfroment/chargebee-go/models/attacheditem"
+	"github.com/autopilot3/chargebee-go"
+	"github.com/autopilot3/chargebee-go/models/attacheditem"
 	"net/url"
 )
 

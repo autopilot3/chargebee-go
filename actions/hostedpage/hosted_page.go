@@ -3,8 +3,8 @@ package hostedpage
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/sfroment/chargebee-go"
-	"github.com/sfroment/chargebee-go/models/hostedpage"
+	"github.com/autopilot3/chargebee-go"
+	"github.com/autopilot3/chargebee-go/models/hostedpage"
 	"net/url"
 )
 

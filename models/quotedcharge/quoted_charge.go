@@ -1,7 +1,7 @@
 package quotedcharge
 
 import (
-	"github.com/sfroment/chargebee-go/enum"
+	"github.com/autopilot3/chargebee-go/enum"
 )
 
 type QuotedCharge struct {

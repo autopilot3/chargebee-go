@@ -2,9 +2,9 @@ package plan
 
 import (
 	"encoding/json"
-	"github.com/sfroment/chargebee-go/enum"
-	"github.com/sfroment/chargebee-go/filter"
-	planEnum "github.com/sfroment/chargebee-go/models/plan/enum"
+	"github.com/autopilot3/chargebee-go/enum"
+	"github.com/autopilot3/chargebee-go/filter"
+	planEnum "github.com/autopilot3/chargebee-go/models/plan/enum"
 )
 
 type Plan struct {

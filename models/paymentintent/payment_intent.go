@@ -1,7 +1,7 @@
 package paymentintent
 
 import (
-	paymentIntentEnum "github.com/sfroment/chargebee-go/models/paymentintent/enum"
+	paymentIntentEnum "github.com/autopilot3/chargebee-go/models/paymentintent/enum"
 )
 
 type PaymentIntent struct {

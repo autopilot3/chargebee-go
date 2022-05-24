@@ -2,8 +2,8 @@ package order
 
 import (
 	"fmt"
-	"github.com/sfroment/chargebee-go"
-	"github.com/sfroment/chargebee-go/models/order"
+	"github.com/autopilot3/chargebee-go"
+	"github.com/autopilot3/chargebee-go/models/order"
 	"net/url"
 )
 

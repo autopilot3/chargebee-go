@@ -2,8 +2,8 @@ package feature
 
 import (
 	"fmt"
-	"github.com/sfroment/chargebee-go"
-	"github.com/sfroment/chargebee-go/models/feature"
+	"github.com/autopilot3/chargebee-go"
+	"github.com/autopilot3/chargebee-go/models/feature"
 	"net/url"
 )
 

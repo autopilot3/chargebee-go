@@ -1,9 +1,9 @@
 package promotionalcredit
 
 import (
-	"github.com/sfroment/chargebee-go/enum"
-	"github.com/sfroment/chargebee-go/filter"
-	promotionalCreditEnum "github.com/sfroment/chargebee-go/models/promotionalcredit/enum"
+	"github.com/autopilot3/chargebee-go/enum"
+	"github.com/autopilot3/chargebee-go/filter"
+	promotionalCreditEnum "github.com/autopilot3/chargebee-go/models/promotionalcredit/enum"
 )
 
 type PromotionalCredit struct {

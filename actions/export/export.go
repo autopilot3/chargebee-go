@@ -3,9 +3,9 @@ package export
 import (
 	"errors"
 	"fmt"
-	"github.com/sfroment/chargebee-go"
-	"github.com/sfroment/chargebee-go/models/export"
-	exportEnum "github.com/sfroment/chargebee-go/models/export/enum"
+	"github.com/autopilot3/chargebee-go"
+	"github.com/autopilot3/chargebee-go/models/export"
+	exportEnum "github.com/autopilot3/chargebee-go/models/export/enum"
 	"net/url"
 	"time"
 )

@@ -1,9 +1,9 @@
 package attacheditem
 
 import (
-	"github.com/sfroment/chargebee-go/enum"
-	"github.com/sfroment/chargebee-go/filter"
-	attachedItemEnum "github.com/sfroment/chargebee-go/models/attacheditem/enum"
+	"github.com/autopilot3/chargebee-go/enum"
+	"github.com/autopilot3/chargebee-go/filter"
+	attachedItemEnum "github.com/autopilot3/chargebee-go/models/attacheditem/enum"
 )
 
 type AttachedItem struct {

@@ -1,13 +1,13 @@
 package estimate
 
 import (
-	"github.com/sfroment/chargebee-go/enum"
-	contractTermEnum "github.com/sfroment/chargebee-go/models/contractterm/enum"
-	"github.com/sfroment/chargebee-go/models/creditnoteestimate"
-	"github.com/sfroment/chargebee-go/models/invoiceestimate"
-	paymentIntentEnum "github.com/sfroment/chargebee-go/models/paymentintent/enum"
-	"github.com/sfroment/chargebee-go/models/subscriptionestimate"
-	"github.com/sfroment/chargebee-go/models/unbilledcharge"
+	"github.com/autopilot3/chargebee-go/enum"
+	contractTermEnum "github.com/autopilot3/chargebee-go/models/contractterm/enum"
+	"github.com/autopilot3/chargebee-go/models/creditnoteestimate"
+	"github.com/autopilot3/chargebee-go/models/invoiceestimate"
+	paymentIntentEnum "github.com/autopilot3/chargebee-go/models/paymentintent/enum"
+	"github.com/autopilot3/chargebee-go/models/subscriptionestimate"
+	"github.com/autopilot3/chargebee-go/models/unbilledcharge"
 )
 
 type Estimate struct {

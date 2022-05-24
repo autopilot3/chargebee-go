@@ -1,10 +1,10 @@
 package gift
 
 import (
-	"github.com/sfroment/chargebee-go/enum"
-	"github.com/sfroment/chargebee-go/filter"
-	giftEnum "github.com/sfroment/chargebee-go/models/gift/enum"
-	paymentIntentEnum "github.com/sfroment/chargebee-go/models/paymentintent/enum"
+	"github.com/autopilot3/chargebee-go/enum"
+	"github.com/autopilot3/chargebee-go/filter"
+	giftEnum "github.com/autopilot3/chargebee-go/models/gift/enum"
+	paymentIntentEnum "github.com/autopilot3/chargebee-go/models/paymentintent/enum"
 )
 
 type Gift struct {

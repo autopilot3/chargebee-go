@@ -1,8 +1,8 @@
 package feature
 
 import (
-	"github.com/sfroment/chargebee-go/filter"
-	featureEnum "github.com/sfroment/chargebee-go/models/feature/enum"
+	"github.com/autopilot3/chargebee-go/filter"
+	featureEnum "github.com/autopilot3/chargebee-go/models/feature/enum"
 )
 
 type Feature struct {

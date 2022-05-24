@@ -1,9 +1,9 @@
 package export
 
 import (
-	"github.com/sfroment/chargebee-go/enum"
-	"github.com/sfroment/chargebee-go/filter"
-	exportEnum "github.com/sfroment/chargebee-go/models/export/enum"
+	"github.com/autopilot3/chargebee-go/enum"
+	"github.com/autopilot3/chargebee-go/filter"
+	exportEnum "github.com/autopilot3/chargebee-go/models/export/enum"
 )
 
 type Export struct {

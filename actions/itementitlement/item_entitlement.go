@@ -2,8 +2,8 @@ package itementitlement
 
 import (
 	"fmt"
-	"github.com/sfroment/chargebee-go"
-	"github.com/sfroment/chargebee-go/models/itementitlement"
+	"github.com/autopilot3/chargebee-go"
+	"github.com/autopilot3/chargebee-go/models/itementitlement"
 	"net/url"
 )
 

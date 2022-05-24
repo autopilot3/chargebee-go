@@ -1,10 +1,10 @@
 package paymentsource
 
 import (
-	"github.com/sfroment/chargebee-go/enum"
-	"github.com/sfroment/chargebee-go/filter"
-	paymentIntentEnum "github.com/sfroment/chargebee-go/models/paymentintent/enum"
-	paymentSourceEnum "github.com/sfroment/chargebee-go/models/paymentsource/enum"
+	"github.com/autopilot3/chargebee-go/enum"
+	"github.com/autopilot3/chargebee-go/filter"
+	paymentIntentEnum "github.com/autopilot3/chargebee-go/models/paymentintent/enum"
+	paymentSourceEnum "github.com/autopilot3/chargebee-go/models/paymentsource/enum"
 )
 
 type PaymentSource struct {

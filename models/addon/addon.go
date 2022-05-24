@@ -2,9 +2,9 @@ package addon
 
 import (
 	"encoding/json"
-	"github.com/sfroment/chargebee-go/enum"
-	"github.com/sfroment/chargebee-go/filter"
-	addonEnum "github.com/sfroment/chargebee-go/models/addon/enum"
+	"github.com/autopilot3/chargebee-go/enum"
+	"github.com/autopilot3/chargebee-go/filter"
+	addonEnum "github.com/autopilot3/chargebee-go/models/addon/enum"
 )
 
 type Addon struct {

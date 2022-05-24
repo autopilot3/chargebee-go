@@ -2,10 +2,10 @@ package customer
 
 import (
 	"encoding/json"
-	"github.com/sfroment/chargebee-go/enum"
-	"github.com/sfroment/chargebee-go/filter"
-	customerEnum "github.com/sfroment/chargebee-go/models/customer/enum"
-	paymentIntentEnum "github.com/sfroment/chargebee-go/models/paymentintent/enum"
+	"github.com/autopilot3/chargebee-go/enum"
+	"github.com/autopilot3/chargebee-go/filter"
+	customerEnum "github.com/autopilot3/chargebee-go/models/customer/enum"
+	paymentIntentEnum "github.com/autopilot3/chargebee-go/models/paymentintent/enum"
 )
 
 type Customer struct {

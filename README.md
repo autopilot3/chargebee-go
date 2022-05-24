@@ -7,7 +7,7 @@ This is the beta version of Go Library for integrating with Chargebee. Sign up f
 Install the latest version of the library with the following commands:
 
 ```sh
-	go get github.com/sfroment/chargebee-go
+	go get github.com/autopilot3/chargebee-go
 ```
 
 ## Go Requirement
@@ -21,9 +21,9 @@ Use <b>go1.3 or newer</b>.
 ```go
 import (
   "fmt"
-  "github.com/sfroment/chargebee-go"
-  subscriptionAction "github.com/sfroment/chargebee-go/actions/subscription"
-  "github.com/sfroment/chargebee-go/models/subscription"
+  "github.com/autopilot3/chargebee-go"
+  subscriptionAction "github.com/autopilot3/chargebee-go/actions/subscription"
+  "github.com/autopilot3/chargebee-go/models/subscription"
 )
 
 func main() {
@@ -55,9 +55,9 @@ func main() {
 ```go
 import (
   "fmt"
-  "github.com/sfroment/chargebee-go"
-  subscriptionAction "github.com/sfroment/chargebee-go/actions/subscription"
-  "github.com/sfroment/chargebee-go/models/subscription"
+  "github.com/autopilot3/chargebee-go"
+  subscriptionAction "github.com/autopilot3/chargebee-go/actions/subscription"
+  "github.com/autopilot3/chargebee-go/models/subscription"
 )
 
 func main() {
@@ -120,10 +120,10 @@ To retrieve list of subscriptions :
 ```go
 import (
   "fmt"
-  "github.com/sfroment/chargebee-go"
-  subscriptionAction "github.com/sfroment/chargebee-go/actions/subscription"
-  "github.com/sfroment/chargebee-go/filter"
-  "github.com/sfroment/chargebee-go/models/subscription"
+  "github.com/autopilot3/chargebee-go"
+  subscriptionAction "github.com/autopilot3/chargebee-go/actions/subscription"
+  "github.com/autopilot3/chargebee-go/filter"
+  "github.com/autopilot3/chargebee-go/models/subscription"
 )
 
 func main() {
@@ -160,9 +160,9 @@ func main() {
 ```go
 import (
   "fmt"
-  "github.com/sfroment/chargebee-go"
-  subscriptionAction "github.com/sfroment/chargebee-go/actions/subscription"
-  "github.com/sfroment/chargebee-go/models/subscription"
+  "github.com/autopilot3/chargebee-go"
+  subscriptionAction "github.com/autopilot3/chargebee-go/actions/subscription"
+  "github.com/autopilot3/chargebee-go/models/subscription"
 )
 
 func main() {
