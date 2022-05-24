@@ -1,11 +1,11 @@
 package transaction
 
 import (
-	"github.com/chargebee/chargebee-go/enum"
-	"github.com/chargebee/chargebee-go/filter"
-	creditNoteEnum "github.com/chargebee/chargebee-go/models/creditnote/enum"
-	invoiceEnum "github.com/chargebee/chargebee-go/models/invoice/enum"
-	transactionEnum "github.com/chargebee/chargebee-go/models/transaction/enum"
+	"github.com/sfroment/chargebee-go/enum"
+	"github.com/sfroment/chargebee-go/filter"
+	creditNoteEnum "github.com/sfroment/chargebee-go/models/creditnote/enum"
+	invoiceEnum "github.com/sfroment/chargebee-go/models/invoice/enum"
+	transactionEnum "github.com/sfroment/chargebee-go/models/transaction/enum"
 )
 
 type Transaction struct {

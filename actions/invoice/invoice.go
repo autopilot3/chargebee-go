@@ -2,8 +2,8 @@ package invoice
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/invoice"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/invoice"
 	"net/url"
 )
 

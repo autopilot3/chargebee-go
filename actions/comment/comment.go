@@ -2,8 +2,8 @@ package comment
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/comment"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/comment"
 	"net/url"
 )
 

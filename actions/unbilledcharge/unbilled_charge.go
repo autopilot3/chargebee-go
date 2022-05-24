@@ -2,8 +2,8 @@ package unbilledcharge
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/unbilledcharge"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/unbilledcharge"
 	"net/url"
 )
 

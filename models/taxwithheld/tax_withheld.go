@@ -1,7 +1,7 @@
 package taxwithheld
 
 import (
-	taxWithheldEnum "github.com/chargebee/chargebee-go/models/taxwithheld/enum"
+	taxWithheldEnum "github.com/sfroment/chargebee-go/models/taxwithheld/enum"
 )
 
 type TaxWithheld struct {

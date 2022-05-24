@@ -2,8 +2,8 @@ package plan
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/plan"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/plan"
 	"net/url"
 )
 

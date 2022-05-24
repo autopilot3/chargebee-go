@@ -2,8 +2,8 @@ package promotionalcredit
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/promotionalcredit"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/promotionalcredit"
 	"net/url"
 )
 

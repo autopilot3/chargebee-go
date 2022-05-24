@@ -2,8 +2,8 @@ package item
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/item"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/item"
 	"net/url"
 )
 

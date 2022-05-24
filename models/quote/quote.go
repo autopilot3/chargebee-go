@@ -2,10 +2,10 @@ package quote
 
 import (
 	"encoding/json"
-	"github.com/chargebee/chargebee-go/enum"
-	"github.com/chargebee/chargebee-go/filter"
-	contractTermEnum "github.com/chargebee/chargebee-go/models/contractterm/enum"
-	quoteEnum "github.com/chargebee/chargebee-go/models/quote/enum"
+	"github.com/sfroment/chargebee-go/enum"
+	"github.com/sfroment/chargebee-go/filter"
+	contractTermEnum "github.com/sfroment/chargebee-go/models/contractterm/enum"
+	quoteEnum "github.com/sfroment/chargebee-go/models/quote/enum"
 )
 
 type Quote struct {

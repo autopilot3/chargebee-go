@@ -2,8 +2,8 @@ package portalsession
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/portalsession"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/portalsession"
 	"net/url"
 )
 

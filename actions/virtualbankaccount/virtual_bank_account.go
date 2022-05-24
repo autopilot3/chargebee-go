@@ -2,8 +2,8 @@ package virtualbankaccount
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/virtualbankaccount"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/virtualbankaccount"
 	"net/url"
 )
 
