@@ -2,8 +2,8 @@ package paymentintent
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/paymentintent"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/paymentintent"
 	"net/url"
 )
 

@@ -2,8 +2,8 @@ package couponcode
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/couponcode"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/couponcode"
 	"net/url"
 )
 

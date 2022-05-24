@@ -1,8 +1,8 @@
 package entitlementoverride
 
 import (
-	"github.com/chargebee/chargebee-go/enum"
-	"github.com/chargebee/chargebee-go/models/feature"
+	"github.com/sfroment/chargebee-go/enum"
+	"github.com/sfroment/chargebee-go/models/feature"
 )
 
 type EntitlementOverride struct {

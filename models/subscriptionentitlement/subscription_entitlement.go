@@ -1,8 +1,8 @@
 package subscriptionentitlement
 
 import (
-	"github.com/chargebee/chargebee-go/models/entitlementoverride"
-	"github.com/chargebee/chargebee-go/models/feature"
+	"github.com/sfroment/chargebee-go/models/entitlementoverride"
+	"github.com/sfroment/chargebee-go/models/feature"
 )
 
 type SubscriptionEntitlement struct {

@@ -1,4 +1,5 @@
 # Chargebee Go Client Library - API V2
+
 This is the beta version of Go Library for integrating with Chargebee. Sign up for a Chargebee account [here](https://www.chargebee.com).
 
 ## Installation
@@ -6,22 +7,23 @@ This is the beta version of Go Library for integrating with Chargebee. Sign up f
 Install the latest version of the library with the following commands:
 
 ```sh
-	go get github.com/chargebee/chargebee-go
+	go get github.com/sfroment/chargebee-go
 ```
 
-## Go Requirement 
+## Go Requirement
 
-Use <b>go1.3 or newer</b>. 
+Use <b>go1.3 or newer</b>.
 
 ## Usage
 
 ### To create a customer & subscription
+
 ```go
 import (
   "fmt"
-  "github.com/chargebee/chargebee-go"
-  subscriptionAction "github.com/chargebee/chargebee-go/actions/subscription"
-  "github.com/chargebee/chargebee-go/models/subscription"
+  "github.com/sfroment/chargebee-go"
+  subscriptionAction "github.com/sfroment/chargebee-go/actions/subscription"
+  "github.com/sfroment/chargebee-go/models/subscription"
 )
 
 func main() {
@@ -53,9 +55,9 @@ func main() {
 ```go
 import (
   "fmt"
-  "github.com/chargebee/chargebee-go"
-  subscriptionAction "github.com/chargebee/chargebee-go/actions/subscription"
-  "github.com/chargebee/chargebee-go/models/subscription"
+  "github.com/sfroment/chargebee-go"
+  subscriptionAction "github.com/sfroment/chargebee-go/actions/subscription"
+  "github.com/sfroment/chargebee-go/models/subscription"
 )
 
 func main() {
@@ -112,15 +114,16 @@ func main() {
 ```
 
 ### Use of Filters In List API
+
 To retrieve list of subscriptions :
 
 ```go
 import (
   "fmt"
-  "github.com/chargebee/chargebee-go"
-  subscriptionAction "github.com/chargebee/chargebee-go/actions/subscription"
-  "github.com/chargebee/chargebee-go/filter"
-  "github.com/chargebee/chargebee-go/models/subscription"
+  "github.com/sfroment/chargebee-go"
+  subscriptionAction "github.com/sfroment/chargebee-go/actions/subscription"
+  "github.com/sfroment/chargebee-go/filter"
+  "github.com/sfroment/chargebee-go/models/subscription"
 )
 
 func main() {
@@ -157,16 +160,16 @@ func main() {
 ```go
 import (
   "fmt"
-  "github.com/chargebee/chargebee-go"
-  subscriptionAction "github.com/chargebee/chargebee-go/actions/subscription"
-  "github.com/chargebee/chargebee-go/models/subscription"
+  "github.com/sfroment/chargebee-go"
+  subscriptionAction "github.com/sfroment/chargebee-go/actions/subscription"
+  "github.com/sfroment/chargebee-go/models/subscription"
 )
 
 func main() {
   chargebee.Configure("{site_api_key}", "{site}")
   res, err := subscriptionAction.Create(&subscription.CreateRequestParams{
     PlanId: "cbdemo_grow",
-  }).Headers("chargebee-request-origin-ip", "192.168.1.2").AddParams("customer[cf_gender]","Female").Request() // Customer level custom field. 
+  }).Headers("chargebee-request-origin-ip", "192.168.1.2").AddParams("customer[cf_gender]","Female").Request() // Customer level custom field.
   if err != nil {
     panic(err)
   }else{
@@ -188,31 +191,31 @@ func main() {
 ## Error Handling
 
 ```go
-_,err := //Go Library call 
+_,err := //Go Library call
 
 if err != nil {
   if goErr,ok := err.(*chargebee.Error); ok {
 
-    //Identify the type of Error 
+    //Identify the type of Error
     switch goErr.Type {
-      
+
     case chargebee.PaymentError:
       // First check for card parameters entered by the user.
         // We recommend you to validate the input at the client side itself to catch simple mistakes.
         if goErr.Param == "card[number]" {
-          // Ask your user to recheck the card number. A better way is to use 
-          // Stripe's https://github.com/stripe/jquery.payment for validating it in the client side itself.  
-          //}else if(goErr.Param == &lt;other card params&gt;){ 
+          // Ask your user to recheck the card number. A better way is to use
+          // Stripe's https://github.com/stripe/jquery.payment for validating it in the client side itself.
+          //}else if(goErr.Param == &lt;other card params&gt;){
             //Similarly check for other card parameters entered by the user.
             //....
         } else {
             // Verfication or processing failures.
             // Provide a standard message to your user to recheck his card details or provide a different card.
-            // Like  'Sorry,there was a problem when processing your card, please check the details and try again'. 
+            // Like  'Sorry,there was a problem when processing your card, please check the details and try again'.
         }
 
       case chargebee.InvalidRequestError:
-        // For coupons you could decide to provide specific messages by using 
+        // For coupons you could decide to provide specific messages by using
         // the 'api_error_code' attribute in the ex.
         if goErr.Param == "coupon" {
           if goErr.APIErrorCode == "resource_not_found" {
@@ -225,19 +228,19 @@ if err != nil {
             // Inform user to recheck his coupon code.
           }
         } else {
-          // Since you would have validated all other parameters on your side itself, 
+          // Since you would have validated all other parameters on your side itself,
           // this could probably be a bug in your code. Provide a generic message to your users.
         }
 
     case chargebee.OperationFailedError:
       // Indicates that the request parameters were right but the request couldn't be completed.
         // The reasons might be "api_request_limit_exceeded" or could be due to an issue in ChargeBee side.
-        // These should occur very rarely and mostly be of temporary nature. 
+        // These should occur very rarely and mostly be of temporary nature.
         // You could ask your user to retry after some time.
       default :
         // These are unhandled exceptions (Could be due to a bug in your code or very rarely in client library).
           // The errors from ChargeBee such as authentication failures will come here.
-            // You could ask users contact your support.     
+            // You could ask users contact your support.
     }
   }
 }
@@ -246,4 +249,3 @@ if err != nil {
 ## License
 
 See the LICENSE file.
-

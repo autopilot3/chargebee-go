@@ -2,8 +2,8 @@ package subscriptionentitlement
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/subscriptionentitlement"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/subscriptionentitlement"
 	"net/url"
 )
 

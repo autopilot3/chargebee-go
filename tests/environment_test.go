@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/chargebee/chargebee-go"
+	"github.com/sfroment/chargebee-go"
 	"github.com/stretchr/testify/assert"
 )
 

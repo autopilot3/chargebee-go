@@ -1,9 +1,9 @@
 package virtualbankaccount
 
 import (
-	"github.com/chargebee/chargebee-go/enum"
-	"github.com/chargebee/chargebee-go/filter"
-	virtualBankAccountEnum "github.com/chargebee/chargebee-go/models/virtualbankaccount/enum"
+	"github.com/sfroment/chargebee-go/enum"
+	"github.com/sfroment/chargebee-go/filter"
+	virtualBankAccountEnum "github.com/sfroment/chargebee-go/models/virtualbankaccount/enum"
 )
 
 type VirtualBankAccount struct {

@@ -1,4 +1,4 @@
-module github.com/chargebee/chargebee-go
+module github.com/sfroment/chargebee-go
 
 go 1.18
 

@@ -2,8 +2,8 @@ package card
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/card"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/card"
 	"net/url"
 )
 

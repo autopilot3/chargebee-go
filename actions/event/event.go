@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/event"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/event"
 	"net/url"
 	"strings"
 )

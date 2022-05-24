@@ -2,8 +2,8 @@ package estimate
 
 import (
 	"fmt"
-	"github.com/chargebee/chargebee-go"
-	"github.com/chargebee/chargebee-go/models/estimate"
+	"github.com/sfroment/chargebee-go"
+	"github.com/sfroment/chargebee-go/models/estimate"
 	"net/url"
 )
 

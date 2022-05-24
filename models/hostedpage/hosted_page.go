@@ -2,10 +2,10 @@ package hostedpage
 
 import (
 	"encoding/json"
-	"github.com/chargebee/chargebee-go/enum"
-	"github.com/chargebee/chargebee-go/filter"
-	contractTermEnum "github.com/chargebee/chargebee-go/models/contractterm/enum"
-	hostedPageEnum "github.com/chargebee/chargebee-go/models/hostedpage/enum"
+	"github.com/sfroment/chargebee-go/enum"
+	"github.com/sfroment/chargebee-go/filter"
+	contractTermEnum "github.com/sfroment/chargebee-go/models/contractterm/enum"
+	hostedPageEnum "github.com/sfroment/chargebee-go/models/hostedpage/enum"
 )
 
 type HostedPage struct {
