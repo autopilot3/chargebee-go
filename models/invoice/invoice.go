@@ -19,7 +19,6 @@ type Invoice struct {
 	VatNumber               string                    `json:"vat_number"`
 	PriceType               enum.PriceType            `json:"price_type"`
 	Date                    int64                     `json:"date"`
-	CreatedAt               int64                     `json:"created_at"`
 	DueDate                 int64                     `json:"due_date"`
 	NetTermDays             int32                     `json:"net_term_days"`
 	ExchangeRate            float64                   `json:"exchange_rate"`
@@ -31,6 +30,7 @@ type Invoice struct {
 	CreditsApplied          int32                     `json:"credits_applied"`
 	AmountDue               int32                     `json:"amount_due"`
 	PaidAt                  int64                     `json:"paid_at"`
+	PaidOn                  int64                     `json:"paid_on"`
 	DunningStatus           invoiceEnum.DunningStatus `json:"dunning_status"`
 	NextRetryAt             int64                     `json:"next_retry_at"`
 	VoidedAt                int64                     `json:"voided_at"`
