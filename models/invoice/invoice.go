@@ -19,6 +19,7 @@ type Invoice struct {
 	VatNumber               string                    `json:"vat_number"`
 	PriceType               enum.PriceType            `json:"price_type"`
 	Date                    int64                     `json:"date"`
+	StartDate               int64                     `json:"start_date"`
 	DueDate                 int64                     `json:"due_date"`
 	NetTermDays             int32                     `json:"net_term_days"`
 	ExchangeRate            float64                   `json:"exchange_rate"`
