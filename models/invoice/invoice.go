@@ -71,6 +71,7 @@ type Invoice struct {
 	Deleted                 bool                      `json:"deleted"`
 	VatNumberPrefix         string                    `json:"vat_number_prefix"`
 	Channel                 enum.Channel              `json:"channel"`
+	StartDate               int64                     `json:"start_date"`
 	Object                  string                    `json:"object"`
 }
 type LineItem struct {
