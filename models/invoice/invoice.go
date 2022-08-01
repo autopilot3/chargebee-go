@@ -72,6 +72,7 @@ type Invoice struct {
 	VatNumberPrefix         string                    `json:"vat_number_prefix"`
 	Channel                 enum.Channel              `json:"channel"`
 	StartDate               int64                     `json:"start_date"`
+	EndDate                 int64                     `json:"end_date"`
 	Object                  string                    `json:"object"`
 }
 type LineItem struct {
