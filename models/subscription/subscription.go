@@ -2,6 +2,7 @@ package subscription
 
 import (
 	"encoding/json"
+
 	"github.com/autopilot3/chargebee-go/enum"
 	"github.com/autopilot3/chargebee-go/filter"
 	contractTermEnum "github.com/autopilot3/chargebee-go/models/contractterm/enum"
@@ -74,8 +75,8 @@ type Subscription struct {
 	ShippingAddress                   *ShippingAddress                   `json:"shipping_address"`
 	ReferralInfo                      *ReferralInfo                      `json:"referral_info"`
 	InvoiceNotes                      string                             `json:"invoice_notes"`
-	MetaData                          json.RawMessage                    `json:"meta_data"`
-	Metadata                          json.RawMessage                    `json:"metadata"`
+	MetaData                          json.RawMessage                    `json:"meta_data" bson:"meta_data"`
+	Metadata                          json.RawMessage                    `json:"metadata" bson:"metadata"`
 	Deleted                           bool                               `json:"deleted"`
 	ChangesScheduledAt                int64                              `json:"changes_scheduled_at"`
 	ContractTerm                      *ContractTerm                      `json:"contract_term"`
