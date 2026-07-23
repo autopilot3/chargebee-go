@@ -2,9 +2,10 @@ package promotionalcredit
 
 import (
 	"fmt"
+	"net/url"
+
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/promotionalcredit"
-	"net/url"
 )
 
 func Add(params *promotionalcredit.AddRequestParams) chargebee.RequestObj {

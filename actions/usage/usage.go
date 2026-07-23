@@ -2,9 +2,10 @@ package usage
 
 import (
 	"fmt"
+	"net/url"
+
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/usage"
-	"net/url"
 )
 
 func Create(id string, params *usage.CreateRequestParams) chargebee.RequestObj {

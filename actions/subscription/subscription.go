@@ -2,9 +2,10 @@ package subscription
 
 import (
 	"fmt"
+	"net/url"
+
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/subscription"
-	"net/url"
 )
 
 func Create(params *subscription.CreateRequestParams) chargebee.RequestObj {
@@ -24,6 +25,9 @@ func SubscriptionsForCustomer(id string, params *subscription.SubscriptionsForCu
 }
 func ContractTermsForSubscription(id string, params *subscription.ContractTermsForSubscriptionRequestParams) chargebee.RequestObj {
 	return chargebee.SendList("GET", fmt.Sprintf("/subscriptions/%v/contract_terms", url.PathEscape(id)), params)
+}
+func ListDiscounts(id string, params *subscription.ListDiscountsRequestParams) chargebee.RequestObj {
+	return chargebee.SendList("GET", fmt.Sprintf("/subscriptions/%v/discounts", url.PathEscape(id)), params)
 }
 func Retrieve(id string) chargebee.RequestObj {
 	return chargebee.Send("GET", fmt.Sprintf("/subscriptions/%v", url.PathEscape(id)), nil)
@@ -81,6 +85,9 @@ func ImportForCustomer(id string, params *subscription.ImportForCustomerRequestP
 }
 func ImportContractTerm(id string, params *subscription.ImportContractTermRequestParams) chargebee.RequestObj {
 	return chargebee.Send("POST", fmt.Sprintf("/subscriptions/%v/import_contract_term", url.PathEscape(id)), params)
+}
+func ImportUnbilledCharges(id string, params *subscription.ImportUnbilledChargesRequestParams) chargebee.RequestObj {
+	return chargebee.Send("POST", fmt.Sprintf("/subscriptions/%v/import_unbilled_charges", url.PathEscape(id)), params)
 }
 func ImportForItems(id string, params *subscription.ImportForItemsRequestParams) chargebee.RequestObj {
 	return chargebee.Send("POST", fmt.Sprintf("/customers/%v/import_for_items", url.PathEscape(id)), params)

@@ -2,6 +2,7 @@ package event
 
 import (
 	"encoding/json"
+
 	"github.com/autopilot3/chargebee-go/enum"
 	"github.com/autopilot3/chargebee-go/filter"
 	eventEnum "github.com/autopilot3/chargebee-go/models/event/enum"

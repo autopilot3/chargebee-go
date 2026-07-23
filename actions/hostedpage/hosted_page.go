@@ -3,9 +3,10 @@ package hostedpage
 import (
 	"encoding/json"
 	"fmt"
+	"net/url"
+
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/hostedpage"
-	"net/url"
 )
 
 func CheckoutNew(params *hostedpage.CheckoutNewRequestParams) chargebee.RequestObj {
@@ -64,6 +65,15 @@ func Retrieve(id string) chargebee.RequestObj {
 }
 func List(params *hostedpage.ListRequestParams) chargebee.RequestObj {
 	return chargebee.SendList("GET", fmt.Sprintf("/hosted_pages"), params)
+}
+func PreCancel(params *hostedpage.PreCancelRequestParams) chargebee.RequestObj {
+	return chargebee.Send("POST", fmt.Sprintf("/hosted_pages/pre_cancel"), params)
+}
+func Events(params *hostedpage.EventsRequestParams) chargebee.RequestObj {
+	return chargebee.Send("POST", fmt.Sprintf("/hosted_pages/events"), params)
+}
+func ViewVoucher(params *hostedpage.ViewVoucherRequestParams) chargebee.RequestObj {
+	return chargebee.Send("POST", fmt.Sprintf("/hosted_pages/view_voucher"), params)
 }
 func Content(page hostedpage.HostedPage) *chargebee.Result {
 	content := &chargebee.Result{}

@@ -2,9 +2,10 @@ package item
 
 import (
 	"fmt"
+	"net/url"
+
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/item"
-	"net/url"
 )
 
 func Create(params *item.CreateRequestParams) chargebee.RequestObj {

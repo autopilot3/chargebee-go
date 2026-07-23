@@ -2,9 +2,10 @@ package itementitlement
 
 import (
 	"fmt"
+	"net/url"
+
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/itementitlement"
-	"net/url"
 )
 
 func ItemEntitlementsForItem(id string, params *itementitlement.ItemEntitlementsForItemRequestParams) chargebee.RequestObj {

@@ -4,10 +4,11 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/autopilot3/chargebee-go"
-	"github.com/autopilot3/chargebee-go/models/event"
 	"net/url"
 	"strings"
+
+	"github.com/autopilot3/chargebee-go"
+	"github.com/autopilot3/chargebee-go/models/event"
 )
 
 func List(params *event.ListRequestParams) chargebee.RequestObj {

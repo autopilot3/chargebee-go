@@ -1,6 +1,9 @@
 package chargebee
 
 import (
+	"net/http"
+	"strconv"
+
 	"github.com/autopilot3/chargebee-go/models/addon"
 	"github.com/autopilot3/chargebee-go/models/address"
 	"github.com/autopilot3/chargebee-go/models/advanceinvoiceschedule"
@@ -15,6 +18,7 @@ import (
 	"github.com/autopilot3/chargebee-go/models/creditnote"
 	"github.com/autopilot3/chargebee-go/models/customer"
 	"github.com/autopilot3/chargebee-go/models/differentialprice"
+	"github.com/autopilot3/chargebee-go/models/discount"
 	"github.com/autopilot3/chargebee-go/models/download"
 	"github.com/autopilot3/chargebee-go/models/entitlementoverride"
 	"github.com/autopilot3/chargebee-go/models/estimate"
@@ -24,6 +28,9 @@ import (
 	"github.com/autopilot3/chargebee-go/models/gift"
 	"github.com/autopilot3/chargebee-go/models/hierarchy"
 	"github.com/autopilot3/chargebee-go/models/hostedpage"
+	"github.com/autopilot3/chargebee-go/models/impacteditem"
+	"github.com/autopilot3/chargebee-go/models/impactedsubscription"
+	"github.com/autopilot3/chargebee-go/models/inappsubscription"
 	"github.com/autopilot3/chargebee-go/models/invoice"
 	"github.com/autopilot3/chargebee-go/models/item"
 	"github.com/autopilot3/chargebee-go/models/itementitlement"
@@ -31,10 +38,13 @@ import (
 	"github.com/autopilot3/chargebee-go/models/itemprice"
 	"github.com/autopilot3/chargebee-go/models/order"
 	"github.com/autopilot3/chargebee-go/models/paymentintent"
+	"github.com/autopilot3/chargebee-go/models/paymentreferencenumber"
 	"github.com/autopilot3/chargebee-go/models/paymentsource"
+	"github.com/autopilot3/chargebee-go/models/paymentvoucher"
 	"github.com/autopilot3/chargebee-go/models/plan"
 	"github.com/autopilot3/chargebee-go/models/portalsession"
 	"github.com/autopilot3/chargebee-go/models/promotionalcredit"
+	"github.com/autopilot3/chargebee-go/models/purchase"
 	"github.com/autopilot3/chargebee-go/models/quote"
 	"github.com/autopilot3/chargebee-go/models/quotedcharge"
 	"github.com/autopilot3/chargebee-go/models/quotedsubscription"
@@ -54,12 +64,14 @@ import (
 )
 
 type ResultList struct {
-	List       []*Result `json:"list"`
-	NextOffset string    `json:"next_offset"`
+	List            []*Result `json:"list"`
+	NextOffset      string    `json:"next_offset"`
+	responseHeaders http.Header
 }
 type Result struct {
 	Subscription            *subscription.Subscription                       `json:"subscription,omitempty"`
 	ContractTerm            *contractterm.ContractTerm                       `json:"contract_term,omitempty"`
+	Discount                *discount.Discount                               `json:"discount,omitempty"`
 	AdvanceInvoiceSchedule  *advanceinvoiceschedule.AdvanceInvoiceSchedule   `json:"advance_invoice_schedule,omitempty"`
 	Customer                *customer.Customer                               `json:"customer,omitempty"`
 	Hierarchy               *hierarchy.Hierarchy                             `json:"hierarchy,omitempty"`
@@ -71,6 +83,7 @@ type Result struct {
 	Card                    *card.Card                                       `json:"card,omitempty"`
 	PromotionalCredit       *promotionalcredit.PromotionalCredit             `json:"promotional_credit,omitempty"`
 	Invoice                 *invoice.Invoice                                 `json:"invoice,omitempty"`
+	PaymentReferenceNumber  *paymentreferencenumber.PaymentReferenceNumber   `json:"payment_reference_number,omitempty"`
 	TaxWithheld             *taxwithheld.TaxWithheld                         `json:"tax_withheld,omitempty"`
 	CreditNote              *creditnote.CreditNote                           `json:"credit_note,omitempty"`
 	UnbilledCharge          *unbilledcharge.UnbilledCharge                   `json:"unbilled_charge,omitempty"`
@@ -105,9 +118,14 @@ type Result struct {
 	AttachedItem            *attacheditem.AttachedItem                       `json:"attached_item,omitempty"`
 	DifferentialPrice       *differentialprice.DifferentialPrice             `json:"differential_price,omitempty"`
 	Feature                 *feature.Feature                                 `json:"feature,omitempty"`
+	ImpactedSubscription    *impactedsubscription.ImpactedSubscription       `json:"impacted_subscription,omitempty"`
+	ImpactedItem            *impacteditem.ImpactedItem                       `json:"impacted_item,omitempty"`
 	SubscriptionEntitlement *subscriptionentitlement.SubscriptionEntitlement `json:"subscription_entitlement,omitempty"`
 	ItemEntitlement         *itementitlement.ItemEntitlement                 `json:"item_entitlement,omitempty"`
+	InAppSubscription       *inappsubscription.InAppSubscription             `json:"in_app_subscription,omitempty"`
 	EntitlementOverride     *entitlementoverride.EntitlementOverride         `json:"entitlement_override,omitempty"`
+	Purchase                *purchase.Purchase                               `json:"purchase,omitempty"`
+	PaymentVoucher          *paymentvoucher.PaymentVoucher                   `json:"payment_voucher,omitempty"`
 	UnbilledCharges         []*unbilledcharge.UnbilledCharge                 `json:"unbilled_charges,omitempty"`
 	CreditNotes             []*creditnote.CreditNote                         `json:"credit_notes,omitempty"`
 	AdvanceInvoiceSchedules []*advanceinvoiceschedule.AdvanceInvoiceSchedule `json:"advance_invoice_schedules,omitempty"`
@@ -115,4 +133,34 @@ type Result struct {
 	Downloads               []*download.Download                             `json:"downloads,omitempty"`
 	Invoices                []*invoice.Invoice                               `json:"invoices,omitempty"`
 	DifferentialPrices      []*differentialprice.DifferentialPrice           `json:"differential_prices,omitempty"`
+	InAppSubscriptions      []*inappsubscription.InAppSubscription           `json:"in_app_subscriptions,omitempty"`
+	responseHeaders         http.Header
+}
+
+func (rl *ResultList) GetResponseHeaders() http.Header {
+	return rl.responseHeaders
+}
+
+func (r *Result) GetResponseHeaders() http.Header {
+	return r.responseHeaders
+}
+
+func (r *Result) IsIdempotencyReplayed() bool {
+	value := r.responseHeaders.Get(IdempotencyReplayHeader)
+	replayed, err := strconv.ParseBool(value)
+	if err != nil {
+		return false
+	}
+	return replayed
+}
+
+type ResponseMeta struct {
+	Headers    http.Header
+	Status     string
+	StatusCode int
+}
+
+type CBResponse struct {
+	Body []byte
+	ResponseMeta
 }

@@ -2,9 +2,10 @@ package paymentsource
 
 import (
 	"fmt"
+	"net/url"
+
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/paymentsource"
-	"net/url"
 )
 
 func CreateUsingTempToken(params *paymentsource.CreateUsingTempTokenRequestParams) chargebee.RequestObj {
@@ -18,6 +19,9 @@ func CreateUsingToken(params *paymentsource.CreateUsingTokenRequestParams) charg
 }
 func CreateUsingPaymentIntent(params *paymentsource.CreateUsingPaymentIntentRequestParams) chargebee.RequestObj {
 	return chargebee.Send("POST", fmt.Sprintf("/payment_sources/create_using_payment_intent"), params)
+}
+func CreateVoucherPaymentSource(params *paymentsource.CreateVoucherPaymentSourceRequestParams) chargebee.RequestObj {
+	return chargebee.Send("POST", fmt.Sprintf("/payment_sources/create_voucher_payment_source"), params)
 }
 func CreateCard(params *paymentsource.CreateCardRequestParams) chargebee.RequestObj {
 	return chargebee.Send("POST", fmt.Sprintf("/payment_sources/create_card"), params)

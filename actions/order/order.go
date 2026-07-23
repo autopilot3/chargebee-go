@@ -2,9 +2,10 @@ package order
 
 import (
 	"fmt"
+	"net/url"
+
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/order"
-	"net/url"
 )
 
 func Create(params *order.CreateRequestParams) chargebee.RequestObj {

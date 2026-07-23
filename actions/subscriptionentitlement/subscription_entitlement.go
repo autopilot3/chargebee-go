@@ -2,9 +2,10 @@ package subscriptionentitlement
 
 import (
 	"fmt"
+	"net/url"
+
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/subscriptionentitlement"
-	"net/url"
 )
 
 func SubscriptionEntitlementsForSubscription(id string, params *subscriptionentitlement.SubscriptionEntitlementsForSubscriptionRequestParams) chargebee.RequestObj {
