@@ -37,9 +37,9 @@ type GiftReceiver struct {
 	Object         string `json:"object"`
 }
 type GiftTimeline struct {
-	Status     enum.Status `json:"status"`
-	OccurredAt int64       `json:"occurred_at"`
-	Object     string      `json:"object"`
+	Status     giftEnum.Status `json:"status"`
+	OccurredAt int64           `json:"occurred_at"`
+	Object     string          `json:"object"`
 }
 type CreateRequestParams struct {
 	ScheduledAt     *int64                       `json:"scheduled_at,omitempty"`

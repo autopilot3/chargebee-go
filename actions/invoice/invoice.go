@@ -34,6 +34,9 @@ func ApplyPayments(id string, params *invoice.ApplyPaymentsRequestParams) charge
 func SyncUsages(id string) chargebee.RequestObj {
 	return chargebee.Send("POST", fmt.Sprintf("/invoices/%v/sync_usages", url.PathEscape(id)), nil)
 }
+func DeleteLineItems(id string, params *invoice.DeleteLineItemsRequestParams) chargebee.RequestObj {
+	return chargebee.Send("POST", fmt.Sprintf("/invoices/%v/delete_line_items", url.PathEscape(id)), params)
+}
 func ApplyCredits(id string, params *invoice.ApplyCreditsRequestParams) chargebee.RequestObj {
 	return chargebee.Send("POST", fmt.Sprintf("/invoices/%v/apply_credits", url.PathEscape(id)), params)
 }
@@ -55,6 +58,9 @@ func Pdf(id string, params *invoice.PdfRequestParams) chargebee.RequestObj {
 func DownloadEinvoice(id string) chargebee.RequestObj {
 	return chargebee.Send("GET", fmt.Sprintf("/invoices/%v/download_einvoice", url.PathEscape(id)), nil)
 }
+func ListPaymentReferenceNumbers(params *invoice.ListPaymentReferenceNumbersRequestParams) chargebee.RequestObj {
+	return chargebee.SendList("GET", fmt.Sprintf("/invoices/payment_reference_numbers"), params)
+}
 func AddCharge(id string, params *invoice.AddChargeRequestParams) chargebee.RequestObj {
 	return chargebee.Send("POST", fmt.Sprintf("/invoices/%v/add_charge", url.PathEscape(id)), params)
 }
@@ -72,6 +78,12 @@ func CollectPayment(id string, params *invoice.CollectPaymentRequestParams) char
 }
 func RecordPayment(id string, params *invoice.RecordPaymentRequestParams) chargebee.RequestObj {
 	return chargebee.Send("POST", fmt.Sprintf("/invoices/%v/record_payment", url.PathEscape(id)), params)
+}
+func RecordTaxWithheld(id string, params *invoice.RecordTaxWithheldRequestParams) chargebee.RequestObj {
+	return chargebee.Send("POST", fmt.Sprintf("/invoices/%v/record_tax_withheld", url.PathEscape(id)), params)
+}
+func RemoveTaxWithheld(id string, params *invoice.RemoveTaxWithheldRequestParams) chargebee.RequestObj {
+	return chargebee.Send("POST", fmt.Sprintf("/invoices/%v/remove_tax_withheld", url.PathEscape(id)), params)
 }
 func Refund(id string, params *invoice.RefundRequestParams) chargebee.RequestObj {
 	return chargebee.Send("POST", fmt.Sprintf("/invoices/%v/refund", url.PathEscape(id)), params)
@@ -99,4 +111,7 @@ func UpdateDetails(id string, params *invoice.UpdateDetailsRequestParams) charge
 }
 func ResendEinvoice(id string) chargebee.RequestObj {
 	return chargebee.Send("POST", fmt.Sprintf("/invoices/%v/resend_einvoice", url.PathEscape(id)), nil)
+}
+func SendEinvoice(id string) chargebee.RequestObj {
+	return chargebee.Send("POST", fmt.Sprintf("/invoices/%v/send_einvoice", url.PathEscape(id)), nil)
 }

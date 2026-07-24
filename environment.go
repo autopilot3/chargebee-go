@@ -12,7 +12,6 @@ type Environment struct {
 	SiteName        string
 	ChargebeeDomain string
 	Protocol        string
-	APIVersion      string
 }
 
 var (
@@ -44,15 +43,10 @@ func (env *Environment) apiBaseUrl() string {
 	if env.Protocol == "" {
 		env.Protocol = "https"
 	}
-	apiVersion := APIVersion
-	if env.APIVersion != "" {
-		apiVersion = env.APIVersion
-	}
-
 	if env.ChargebeeDomain != "" {
-		return fmt.Sprintf("%v://%v.%v/api/%v", env.Protocol, env.SiteName, env.ChargebeeDomain, apiVersion)
+		return fmt.Sprintf("%v://%v.%v/api/%v", env.Protocol, env.SiteName, env.ChargebeeDomain, APIVersion)
 	}
-	return fmt.Sprintf("https://%v.chargebee.com/api/%v", env.SiteName, apiVersion)
+	return fmt.Sprintf("https://%v.chargebee.com/api/%v", env.SiteName, APIVersion)
 }
 
 func DefaultConfig() Environment {
@@ -71,4 +65,5 @@ func UpdateTotalHTTPTimeout(timeout time.Duration) {
 	if httpClient != nil {
 		httpClient.Timeout = TotalHTTPTimeout
 	}
+
 }
