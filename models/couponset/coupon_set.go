@@ -2,7 +2,6 @@ package couponset
 
 import (
 	"encoding/json"
-
 	"github.com/autopilot3/chargebee-go/filter"
 )
 

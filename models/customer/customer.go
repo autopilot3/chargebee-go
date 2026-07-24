@@ -2,7 +2,6 @@ package customer
 
 import (
 	"encoding/json"
-
 	"github.com/autopilot3/chargebee-go/enum"
 	"github.com/autopilot3/chargebee-go/filter"
 	customerEnum "github.com/autopilot3/chargebee-go/models/customer/enum"

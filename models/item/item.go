@@ -2,7 +2,6 @@ package item
 
 import (
 	"encoding/json"
-
 	"github.com/autopilot3/chargebee-go/enum"
 	"github.com/autopilot3/chargebee-go/filter"
 	itemEnum "github.com/autopilot3/chargebee-go/models/item/enum"

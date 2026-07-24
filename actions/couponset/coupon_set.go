@@ -2,10 +2,9 @@ package couponset
 
 import (
 	"fmt"
-	"net/url"
-
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/couponset"
+	"net/url"
 )
 
 func Create(params *couponset.CreateRequestParams) chargebee.RequestObj {

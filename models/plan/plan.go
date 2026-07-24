@@ -2,7 +2,6 @@ package plan
 
 import (
 	"encoding/json"
-
 	"github.com/autopilot3/chargebee-go/enum"
 	"github.com/autopilot3/chargebee-go/filter"
 	planEnum "github.com/autopilot3/chargebee-go/models/plan/enum"

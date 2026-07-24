@@ -2,10 +2,9 @@ package transaction
 
 import (
 	"fmt"
-	"net/url"
-
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/transaction"
+	"net/url"
 )
 
 func CreateAuthorization(params *transaction.CreateAuthorizationRequestParams) chargebee.RequestObj {

@@ -2,7 +2,6 @@ package differentialprice
 
 import (
 	"encoding/json"
-
 	"github.com/autopilot3/chargebee-go/filter"
 	differentialPriceEnum "github.com/autopilot3/chargebee-go/models/differentialprice/enum"
 )

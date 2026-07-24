@@ -2,10 +2,9 @@ package comment
 
 import (
 	"fmt"
-	"net/url"
-
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/comment"
+	"net/url"
 )
 
 func Create(params *comment.CreateRequestParams) chargebee.RequestObj {

@@ -2,7 +2,6 @@ package itemprice
 
 import (
 	"encoding/json"
-
 	"github.com/autopilot3/chargebee-go/enum"
 	"github.com/autopilot3/chargebee-go/filter"
 	itemPriceEnum "github.com/autopilot3/chargebee-go/models/itemprice/enum"

@@ -2,7 +2,6 @@ package coupon
 
 import (
 	"encoding/json"
-
 	"github.com/autopilot3/chargebee-go/enum"
 	"github.com/autopilot3/chargebee-go/filter"
 	couponEnum "github.com/autopilot3/chargebee-go/models/coupon/enum"

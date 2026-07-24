@@ -2,10 +2,9 @@ package subscription
 
 import (
 	"fmt"
-	"net/url"
-
 	"github.com/autopilot3/chargebee-go"
 	"github.com/autopilot3/chargebee-go/models/subscription"
+	"net/url"
 )
 
 func Create(params *subscription.CreateRequestParams) chargebee.RequestObj {
