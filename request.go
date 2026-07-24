@@ -27,7 +27,7 @@ func (request RequestObj) RequestWithEnv(env Environment) (*Result, error) {
 	}
 
 	if err := UnmarshalJSON(res.Body, result); err != nil {
-		return result, nil
+		return result, err
 	}
 	result.responseHeaders = res.Headers
 
